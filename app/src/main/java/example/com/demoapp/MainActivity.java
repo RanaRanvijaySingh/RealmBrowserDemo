@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayDbData() {
         mRealm.beginTransaction();
-        RealmResults<BookModel> realmResults = mRealm.where(BookModel.class).findAll();
+        RealmResults<BookModel> realmResults = mRealm.where(BookModel.class)
+                .findAll();
         StringBuilder stringBuilder = new StringBuilder();
         for (BookModel bookModel : realmResults) {
             stringBuilder.append(bookModel.getTitle())
