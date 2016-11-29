@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btnClearAllRecord)
-    void btnClearAllRecord() {
+    void onClickClearButton() {
         mCount = 100;
         mRealm.beginTransaction();
         mRealm.clear(BookModel.class);
