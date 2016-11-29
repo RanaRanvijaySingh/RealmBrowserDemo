@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="btn_add_new_record">Add new record</string>
+    <string name="btn_clear_all_record">Clear all record</string>
+</resources>
