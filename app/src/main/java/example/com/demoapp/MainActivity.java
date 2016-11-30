@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btnAddNewRecord)
     void onClickAddNewRecord() {
         mRealm.beginTransaction();
-        BookModel bookModel = mRealm.createObject(BookModel.class);
-        bookModel.setTitle("Book title " + mCount);
-        bookModel.setCost(mCount);
+        Book book = mRealm.createObject(Book.class);
+        book.setTitle("Title_" + mCount);
+        book.setCost(mCount);
         mCount++;
         mRealm.commitTransaction();
         displayDbData();
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayDbData() {
         mRealm.beginTransaction();
-        RealmResults<BookModel> realmResults = mRealm.where(BookModel.class)
+        RealmResults<Book> realmResults = mRealm.where(Book.class)
                 .findAll();
         StringBuilder stringBuilder = new StringBuilder();
-        for (BookModel bookModel : realmResults) {
-            stringBuilder.append(bookModel.getTitle())
+        for (Book book : realmResults) {
+            stringBuilder.append(book.getTitle())
                     .append("   ")
-                    .append(bookModel.getCost())
+                    .append(book.getCost())
                     .append("\n");
         }
         tvData.setText(stringBuilder.toString());
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     void onClickClearButton() {
         mCount = 100;
         mRealm.beginTransaction();
-        mRealm.clear(BookModel.class);
+        mRealm.clear(Book.class);
         mRealm.commitTransaction();
         tvData.setText("");
     }
