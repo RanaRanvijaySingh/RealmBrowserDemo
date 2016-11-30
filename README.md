@@ -52,3 +52,6 @@ Now to view the database <br/>
 * In address bar give this **chrome://inspect**, you will see the application listed by its package name.<br/>
 * Click on **inspect** button.
 * Goto **Resources > Web SQL > default.realm** , you can view all your data here.  
+
+**Issues faced and resolved.** <br/>
+StackLink : App crash - was getting [java-lang-noclassdeffounderror-failed-resolution-of-lio-realm-internal-shared](http://stackoverflow.com/questions/40866130/java-lang-noclassdeffounderror-failed-resolution-of-lio-realm-internal-sharedr/40866797?noredirect=1#comment68951257_40866797)
