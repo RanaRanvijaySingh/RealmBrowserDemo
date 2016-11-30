@@ -3,7 +3,7 @@ package example.com.demoapp;
 import io.realm.RealmObject;
 import io.realm.annotations.Required;
 
-public class BookModel extends RealmObject{
+public class Book extends RealmObject{
 
     @Required
     private String title;
